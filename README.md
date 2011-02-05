@@ -11,9 +11,9 @@ The [Rate Limiting for the streaming API][rate_limits] only allows one connectio
 > Continually failing connections will result in your IP address being
 > blacklisted from all Twitter access.
 
-I created this small service in order to be able to consume the streaming API from several scripts in my computer with one single connection and being able to restart the scripts without triggering reconnections to Twitter.
-
 This small TCP service establishes one single connection to the Twitter Streaming API and echoes all the tweets to any client connected to the socket at `/tmp/tweets.sock`.
+
+It allows you to consume the streaming API from several scripts in your computer with one single connection to Twitter and being able to restart the scripts without reconnecting to Twitter.
 
 ## Usage
 
